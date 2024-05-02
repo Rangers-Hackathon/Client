@@ -1,9 +1,9 @@
 @import url('https://fonts.googleapis.com/css?family=Poppins');
 
-$primary-color: #b9017c;
+$primary-color: lighten(#94226e, 5%);
 $navy: #00040e;
-$secondary-color: #1d6db4;
-$white: #ffffffee;
+$secondary-color: #0479a7;
+$white: #fff;
 $bg: #fcfeffd6;
 $black: #111111;
 $red: rgb(218, 64, 64);
@@ -127,6 +127,9 @@ html
     border-radius: 5px;
     cursor: pointer;
     font-size: small;
+    font-weight: 600;
+    letter-spacing: 1px;
+
 
     i
     {
@@ -242,7 +245,7 @@ html
 
 .shadowed
 {
-    box-shadow: inset 1px 1px rgba(255, 255, 255, 0.478), inset -1px -1px rgba(255, 255, 255, 0.132), 1px 3px 24px -1px rgba(0, 0, 0, 0.27);
+    box-shadow: inset 1px 1px rgba(255, 255, 255, 0.178), inset -1px -1px rgba(255, 255, 255, 0.132), 1px 3px 24px -1px rgba(0, 0, 0, 0.17);
 }
 .btn-round
 {
@@ -276,6 +279,31 @@ html
     {
         background-color: $primary-color;
         color: $white;
+    }
+}
+
+.btn-black
+{
+    background-color: $black;
+    color: white;
+    letter-spacing: 1px;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 10px;
+    cursor: pointer;
+    transition: all 1s ease-in;
+
+    i
+    {
+        margin-right: 5px;
+        margin-left: 5px;
+    }
+
+    &:hover
+    {
+        background-color: transparent;
+        border: 2px solid $black;
+        color: $black;
     }
 }
 
@@ -330,7 +358,7 @@ html
 }
 .btn-gradient
 {
-    background: linear-gradient(to bottom, lighten($secondary-color, 60), lighten($secondary-color, 10));
+    background: linear-gradient(to right, lighten($primary-color, 6), lighten($secondary-color, 10));
 
     color: white;
     letter-spacing: 1px;
@@ -348,9 +376,7 @@ html
 
     &:hover
     {
-        background: linear-gradient(to top, lighten($secondary-color, 60), lighten($secondary-color, 10));
-
-
+        background: linear-gradient(to left, lighten($primary-color, 6), lighten($secondary-color, 10));
 
     }
 }
@@ -493,18 +519,21 @@ html
 
 .border-primary
 {
-    height: 1px;
+    height: 2px;
     width: 100px;
-    background-color: #117dc5;
+    background-color: $primary-color;
     padding: 0;
     border-radius: 50px;
+    margin-bottom: 20px;
 }
 
 .border-secondary
 {
-    height: 1px;
+    height: 2px;
     width: 100px;
-    background-color: #cfe5fe;
+    background-color: $secondary-color;
+    margin-bottom: 20px;
+
 }
 
 .border-white
@@ -516,9 +545,10 @@ html
 
 .border-black
 {
-    height: 1px;
+    height: 2px;
     width: 100px;
     background-color: #111111;
+    margin-bottom: 20px;
 }
 
 .txt-caps

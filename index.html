@@ -3,86 +3,158 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="shortcut icon" href="./assets/img/logo solo.png" type="image/x-icon">
     <link rel="stylesheet" href="./assets/css/style.css">
     <script src="./assets/js/fa.js"></script>
-
-    <script>
-        AOS.init()
-    </script>
     <title>AfyaConnect</title>
 </head>
 <body>
-
-    <header>
+    
+    <header id="menu">
         <div class="title">
-            <img src="./assets/img/transp-logo.png" alt="" height="50px">
+            <img src="./assets/img/transp-logo.png" alt="">
         </div>
 
         <nav>
             <ul>
-                <li><a href="#">Home</a></li>
-                <li><a href="#">About</a></li>
-                <li><a href="#">Contact</a></li>
+                <li><a href="#" class="nav_link">Home</a></li>
+                <li><a href="#" class="nav_link">Register</a></li>
+                <li><a href="#" class="nav_link">Features</a></li>
             </ul>
         </nav>
 
-        <a href="#" class="btn-gradient">signup</a>
+        <a href="#" class="btn btn-primary">Login</a>
     </header>
 
     <main>
-        <div class="grid-2">
-            <div class="hero-text">
-                <h1>Access the right health facility, Anytime anywhere</h1>
-                <p>
-                    AfyaConnect is dedicated to ensuring that you receive the highest quality healthcare by seamlessly connecting you with the nearest and most reputable healthcare facilities. Our mission is to enhance access to essential medical services and facilitate prompt attention to your healthcare needs. Through innovative technology and user-friendly platforms, AfyaConnect strives to empower individuals with convenient access to vital healthcare information and services
-                </p>
-
-                <a href="#" class="btn-bordered-gradient">Take tour</a>
-            </div>
-            <div class="hero-img">
-                <img src="./assets/img/health.jpg" alt="">
-            </div>
+        <div class="showcase-text">
+            <h1 class="txt-white">Access The Right Health Facility, Anytime Anywhere</h1>
+    
+            <a href="#" class="btn-primary">Take Tour</a>
         </div>
     </main>
 
     <section>
-        <div class="grid-2">
-            <h1 class="txt-gradient">
-                Imagine a world where a positive test result is just the first step towards effective treatment.
-            </h1>
-        
-            <div class="grid-2">
-                <div class="card">
-                    <i class="fas fa-map-marker"></i>
-                    <p>Maps you to the nearest health facility</p>
-                </div>
+        <div class="border-primary"></div>
+        <h2 class="txt-primary">What Afya Connect Does for you</h2>
+        <p>Tired of endless back and forths looking for a good hospital ? Explore our features meant to give you the best quality.</p>
 
-                <div class="card">
-                    <i class="fas fa-upload"></i>
-                    <p> Lets doctors upload test results for reference</p>
-                </div>
+        <div class="grid-container grid-4">
+            <div class="card">
+                <i class="fas fa-map-marker"></i>
+                <p>Maps you to the nearest health facility</p>
+            </div>
 
-                <div class="card">
-                    <i class="fas fa-paperclip"></i>
-                    <p>Ability to take user feedback and recommend based on it</p>
-                </div>
+            <div class="card">
+                <i class="fas fa-upload"></i>
+                <p> Lets doctors upload test results for reference</p>
+            </div>
 
-                <div class="card">
-                    <i class="fas fa-clock"></i>
-                    <p>Timely access to medical services and facilities  </p>
-                </div>
+            <div class="card">
+                <i class="fas fa-paperclip"></i>
+                <p>Ability to take user feedback and recommend based on that</p>
+            </div>
+
+            <div class="card">
+                <i class="fas fa-clock"></i>
+                <p>Timely access to medical services and facilities  </p>
             </div>
         </div>
+
+        <a href="#" class="btn-primary">Try it now</a>
+
 
     </section>
 
     <section>
-        <div class="grid-2">
-            <img src="./assets/img/map.jpg" alt="">
 
-            <h1 class="txt-gradient">You never have to look for a hospital ever again. <br> Leave that to us</h1>
+        <div class="grid-container grid-2">
+            <img src="./assets/img/mockup.jpg" alt="">
+            <div class="text">
+                <h1>Getting you the best possible, as fast as possible</h1>
+                <p>
+                    We help connect you to the best health facilities in your vicinity on the click of a button.
+                </p>
+                <a href="#" class="btn-primary">Try it now</a>
+
+            </div>
+        </div>
+    </section>
+
+    <section>
+
+        <div class="grid-container grid-2">
+            <div class="text">
+                <h1>Guaranteed quality through feedback</h1>
+                <p>
+                    Enjoy the ability to give feedback on the services you receive and get recommendations based on that.
+                </p>
+                <a href="#" class="btn-primary">Try it now</a>
+
+            </div>
+            <img src="./assets/img/medicine.jpg" alt="">
 
         </div>
     </section>
+
+    <section>
+
+        <div class="grid-container grid-2">
+            <img src="./assets/img/gal.png" alt="">
+
+            <div class="text">
+                <h1>With you, Anywhere and Everywhere</h1>
+                <p>
+                    Get recommendations based on your real time location and access the best health facilities in your vicinity.
+                </p>
+                <a href="#" class="btn-primary">Try it now</a>
+
+            </div>
+
+        </div>
+    </section>
+
+    <script>
+        menu = document.getElementById("menu");
+        links = document.querySelectorAll(".nav_link");
+        window.onkeydown = function (){
+            menu.style.background = "white";
+            menu.classList.add("shadowed");
+
+            links.forEach(element => {
+                element.style.color = "black";
+            });
+            
+            if (window.scrollY == 0 || window.pageYOffset < 1){
+                menu.style.background = "transparent";
+                menu.classList.remove("shadowed");
+
+                links.forEach(element => {
+                element.style.color = "white";
+            });
+            }
+        }
+        window.onscroll = function(){
+            menu.style.background = "white";
+            menu.classList.add("shadowed");
+
+
+            links.forEach(element => {
+                element.style.color = "black";
+            });
+
+            if (window.scrollY == 0 || window.pageYOffset < 1){
+                menu.style.background = "transparent";
+                menu.classList.remove("shadowed");
+
+
+                links.forEach(element => {
+                element.style.color = "white";
+            });
+            }
+        }
+
+    
+    </script>
 </body>
 </html>
