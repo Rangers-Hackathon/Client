@@ -84,11 +84,11 @@ html
 ::-webkit-scrollbar
 {
     width: 5px;
-    background: #000;
+    background: $white;
 }
 ::-webkit-scrollbar-thumb
 {
-    background: linear-gradient(45deg, #1e2f36, #176c8e);
+    background: linear-gradient(45deg, $primary-color, $secondary-color);
     border-radius: 10px;
 }
 
