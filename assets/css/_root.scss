@@ -170,7 +170,7 @@ html
 
 .btn-rounded
 {
-    border-radius: 15px;
+    border-radius: 50px;
 }
 .btn-flat
 {
@@ -609,6 +609,7 @@ html
 {
     background: linear-gradient(to bottom, #18b1f8, #e94383);
     -webkit-background-clip: text;
+    background-clip: text;
     color: transparent;
     letter-spacing: 1px;
 
@@ -617,6 +618,7 @@ html
 {
     background: linear-gradient(60deg,#ffffff, #107aab);
     -webkit-background-clip: text;
+    background-clip: text;
     color: transparent;
     letter-spacing: 1px;
 

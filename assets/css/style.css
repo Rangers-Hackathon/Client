@@ -191,7 +191,7 @@ html {
 }
 
 .btn-rounded {
-  border-radius: 15px;
+  border-radius: 50px;
 }
 
 .btn-flat {
@@ -574,6 +574,7 @@ html {
 .txt-gradient {
   background: linear-gradient(to bottom, #18b1f8, #e94383);
   -webkit-background-clip: text;
+  background-clip: text;
   color: transparent;
   letter-spacing: 1px;
 }
@@ -581,6 +582,7 @@ html {
 .txt-gradient-light {
   background: linear-gradient(60deg, #ffffff, #107aab);
   -webkit-background-clip: text;
+  background-clip: text;
   color: transparent;
   letter-spacing: 1px;
 }
@@ -838,4 +840,33 @@ body section:nth-of-type(2) .grid-container .text p, body section:nth-of-type(3)
   width: 80%;
   margin-bottom: 20px;
   text-transform: none;
+}
+body section:nth-of-type(5) {
+  padding: 0;
+  height: 60vh;
+  width: 100%;
+  background-image: url("../img/cure.jpg");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+body section:nth-of-type(5) .overlay {
+  width: 100%;
+  height: 100%;
+  z-index: 2;
+  background-color: rgba(0, 0, 0, 0.39);
+  -webkit-backdrop-filter: blur(5px);
+          backdrop-filter: blur(5px);
+}
+body section:nth-of-type(5) .overlay h1 {
+  font-size: 3em;
+  width: 60%;
+  text-align: center;
+  margin-bottom: 20px;
+  text-transform: none;
+}
+body section:nth-of-type(5) .overlay a {
+  mix-blend-mode: normal;
+  padding: 20px 30px;
+  border-radius: 50px;
 }/*# sourceMappingURL=style.css.map */
