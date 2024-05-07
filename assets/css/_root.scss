@@ -1,13 +1,85 @@
 @import url('https://fonts.googleapis.com/css?family=Poppins');
 
-$primary-color: lighten(#94226e, 5%);
+$primary-color: lighten(#b40b5a, 1%);
 $navy: #00040e;
-$secondary-color: #0479a7;
+$secondary-color: #0874c2;
 $white: #fff;
 $bg: #fcfeffd6;
 $black: #111111;
 $red: rgb(218, 64, 64);
 $green: rgb(5, 194, 106);
+
+
+header
+{
+    position: fixed;
+    top: 0;
+    z-index: 999;
+    width: 100%;
+    height: 60px;
+    display: inline-flex;
+    transition: all 0.5s cubic-bezier(0.85, 0.135, 0.15, 0.86);
+    background-color: white;
+
+    .title
+    {
+        background-color: $white;
+        width: 10%;
+        position: relative;
+        left: 4%;
+        height: 96%;
+        img
+        {
+            height: 50px;
+            margin: 5px;
+            position: relative;
+        }
+    }
+
+    nav
+    {
+        width: 40%;
+        position: relative;
+        left: 10%;
+        padding-top: 1.5%;
+        ul
+        {
+            display: inline-flex;
+            width: 60%;
+            justify-content: space-evenly;
+
+            li
+            {
+                a
+                {
+                    font-size: 13px;
+                    color: rgba(black, 0.9);
+                    letter-spacing: 1px;
+                    opacity: 0.8;
+
+                    &:hover
+                    {
+                        color: rgba(black, 0.6);
+                    }
+                }
+            }
+        }
+    }
+
+    .btn
+    {
+        background-color: lighten($primary-color, 15);
+        height: 75%;
+        @extend .flex-column;
+        margin-top: .6%;
+        position: relative;
+        left: 30%;
+        width: 10%;
+        border-radius: 30px;
+        font-size: 13px;
+    }
+}
+
 
 *
 {
@@ -230,6 +302,7 @@ html
     border-radius: 5px;
     cursor: pointer;
     transition: all 0.3s ease-in-out;
+    font-size: 14px;
 
     i
     {

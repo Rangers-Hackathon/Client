@@ -1,4 +1,57 @@
 @import url("https://fonts.googleapis.com/css?family=Poppins");
+header {
+  position: fixed;
+  top: 0;
+  z-index: 999;
+  width: 100%;
+  height: 60px;
+  display: inline-flex;
+  transition: all 0.5s cubic-bezier(0.85, 0.135, 0.15, 0.86);
+  background-color: white;
+}
+header .title {
+  background-color: #fff;
+  width: 10%;
+  position: relative;
+  left: 4%;
+  height: 96%;
+}
+header .title img {
+  height: 50px;
+  margin: 5px;
+  position: relative;
+}
+header nav {
+  width: 40%;
+  position: relative;
+  left: 10%;
+  padding-top: 1.5%;
+}
+header nav ul {
+  display: inline-flex;
+  width: 60%;
+  justify-content: space-evenly;
+}
+header nav ul li a {
+  font-size: 13px;
+  color: rgba(0, 0, 0, 0.9);
+  letter-spacing: 1px;
+  opacity: 0.8;
+}
+header nav ul li a:hover {
+  color: rgba(0, 0, 0, 0.6);
+}
+header .btn {
+  background-color: #f11f81;
+  height: 75%;
+  margin-top: 0.6%;
+  position: relative;
+  left: 30%;
+  width: 10%;
+  border-radius: 30px;
+  font-size: 13px;
+}
+
 * {
   margin: 0;
   padding: 0;
@@ -87,7 +140,7 @@ html {
   grid-gap: 5px;
 }
 
-.flex-column, body section div.form form, body section div.form, body section div.pre .overlay, body main div.form form, body main div.form, body main div.pre .overlay, .x-end, .x-start, .y-end, .y-start {
+.flex-column, body section div.form form, body section div.form, body section div.pre .overlay, body main div.form form, body main div.form, body main div.pre .overlay, .x-end, .x-start, .y-end, .y-start, header .btn {
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -125,17 +178,17 @@ html {
 }
 
 ::-webkit-scrollbar-thumb {
-  background: linear-gradient(45deg, #a9277d, #0479a7);
+  background: linear-gradient(45deg, #b90b5c, #0874c2);
   border-radius: 10px;
 }
 
 .btn-bordered-gradient {
   font-size: 14px;
   border: 2px solid;
-  border-top: 2px solid #a9277d;
-  border-bottom: 2px solid #a9277d;
-  border-right: 2px solid #0479a7;
-  border-left: 2px solid #0479a7;
+  border-top: 2px solid #b90b5c;
+  border-bottom: 2px solid #b90b5c;
+  border-right: 2px solid #0874c2;
+  border-left: 2px solid #0874c2;
   width: -moz-max-content;
   width: max-content;
   height: 30px;
@@ -144,15 +197,15 @@ html {
 }
 .btn-bordered-gradient:hover {
   transition: all 2s ease-out;
-  border-top-color: #0479a7;
-  border-bottom-color: #0479a7;
-  border-right-color: #a9277d;
-  border-left-color: #a9277d;
-  background-color: #94dffc;
+  border-top-color: #0874c2;
+  border-bottom-color: #0874c2;
+  border-right-color: #b90b5c;
+  border-left-color: #b90b5c;
+  background-color: #b4defc;
 }
 
 .btn-primary {
-  background-color: #d0329c;
+  background-color: #e90e74;
   color: #fff;
   border: none;
   padding: 10px 20px;
@@ -168,12 +221,12 @@ html {
 }
 .btn-primary:hover {
   transition: all 0.3s ease-in-out;
-  background-color: #bd2c8d;
+  background-color: #d10d68;
 }
 
 .btn-secondary {
-  background-color: #0479a7;
-  border: 2px solid #a9277d;
+  background-color: #0874c2;
+  border: 2px solid #b90b5c;
   color: #111111;
   border: none;
   padding: 10px 20px;
@@ -187,7 +240,7 @@ html {
 }
 .btn-secondary:hover {
   transition: all 0.3s ease-in-out;
-  background-color: #035575;
+  background-color: #065791;
 }
 
 .btn-rounded {
@@ -240,6 +293,7 @@ html {
   border-radius: 5px;
   cursor: pointer;
   transition: all 0.3s ease-in-out;
+  font-size: 14px;
 }
 .btn-white i {
   margin-right: 5px;
@@ -263,8 +317,8 @@ html {
 
 .btn-transparent-primary {
   background-color: transparent;
-  color: #a9277d;
-  border: 2px solid #a9277d;
+  color: #b90b5c;
+  border: 2px solid #b90b5c;
   padding: 10px 20px;
   border-radius: 5px;
   cursor: pointer;
@@ -275,7 +329,7 @@ html {
   margin-left: 5px;
 }
 .btn-transparent-primary:hover {
-  background-color: #a9277d;
+  background-color: #b90b5c;
   color: #fff;
 }
 
@@ -301,8 +355,8 @@ html {
 
 .btn-transparent-secondary {
   background-color: transparent;
-  color: #0479a7;
-  border: 2px solid #0479a7;
+  color: #0874c2;
+  border: 2px solid #0874c2;
   padding: 10px 20px;
   border-radius: 5px;
   cursor: pointer;
@@ -313,7 +367,7 @@ html {
   margin-left: 5px;
 }
 .btn-transparent-secondary:hover {
-  background-color: #0479a7;
+  background-color: #0874c2;
   color: #fff;
 }
 
@@ -337,7 +391,7 @@ html {
 }
 
 .btn-gradient {
-  background: linear-gradient(to right, #c22c90, #059dd9);
+  background: linear-gradient(to right, #d60d6b, #0a91f3);
   color: white;
   letter-spacing: 1px;
   border: none;
@@ -351,7 +405,7 @@ html {
   margin-left: 5px;
 }
 .btn-gradient:hover {
-  background: linear-gradient(to left, #c22c90, #059dd9);
+  background: linear-gradient(to left, #d60d6b, #0a91f3);
 }
 
 .btn-transparent-white {
@@ -494,14 +548,14 @@ html {
 .dot-primary {
   height: 30px;
   width: 50px;
-  background-color: #a9277d;
+  background-color: #b90b5c;
   border-radius: 50%;
 }
 
 .border-primary {
   height: 2px;
   width: 100px;
-  background-color: #a9277d;
+  background-color: #b90b5c;
   padding: 0;
   border-radius: 50px;
   margin-bottom: 20px;
@@ -510,7 +564,7 @@ html {
 .border-secondary {
   height: 2px;
   width: 100px;
-  background-color: #0479a7;
+  background-color: #0874c2;
   margin-bottom: 20px;
 }
 
@@ -540,11 +594,11 @@ html {
 }
 
 .txt-primary, body section div.form h1, body main div.form h1 {
-  color: #d0329c;
+  color: #e90e74;
 }
 
 .txt-secondary {
-  color: #035575;
+  color: #065791;
 }
 
 .txt-white {
@@ -742,6 +796,7 @@ body main div.form form input, body main div.form form select {
   padding: 5px 15px;
   text-transform: none;
   font-size: 13px;
+  max-height: 50px;
 }
 body main div.form form input::-moz-placeholder, body main div.form form select::-moz-placeholder {
   font-size: 13px;
@@ -816,6 +871,7 @@ body section div.form form input, body section div.form form select {
   padding: 5px 15px;
   text-transform: none;
   font-size: 13px;
+  max-height: 50px;
 }
 body section div.form form input::-moz-placeholder, body section div.form form select::-moz-placeholder {
   font-size: 13px;

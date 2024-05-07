@@ -1,0 +1,193 @@
+@import 'root';
+
+body
+{
+
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    background-color: lighten($color: $secondary-color, $amount: 66);
+
+    main
+    {
+        width: 100%;
+        height: 100vh;
+        
+        display: inline-flex;
+
+        .sidebar
+        {
+            width: 20%;
+            height: 100%;
+            @extend .shadowed;
+            background-color: $white;
+
+            .container
+            {
+                width: 90%;
+                height: 75%;
+                position: relative;
+                top: 5%;
+
+                ul
+                {
+                    height: 95%;
+                    width: 100%;
+                    li
+                    {
+                        height: 60px;
+                        margin-bottom: 5px;
+                        border-bottom: 1px solid rgba(0, 0, 0, 0.15);
+                        box-sizing: border-box;
+                        padding-left: 5%;
+                        padding-top: 5%;
+
+                        a
+                        {
+                            color: rgba(0, 0, 0, 0.7);
+                            font-size: 12px;
+
+                            i
+                            {
+                                color: lighten($primary-color, 15);
+                                width: 30px;
+                                height: 30px;
+                                padding: 10px;
+                                margin-right: 3%;
+                                font-size: 16px;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+
+        .main-bar
+        {
+            width: 75%;
+            height: 83%;
+            margin-left: 2%;
+            margin-top: 6%;
+            @extend .flex-column;
+
+            .container
+            {
+                width: 98%;
+                height: 95%;
+                @extend .flex-column, .y-start;
+    
+                
+                .header
+                {
+                    width: 90%;
+                    height: 8%;
+                    border-bottom: 1px solid rgba(0, 0, 0, 0.15);
+                    padding-left: 1%;
+                    padding-top: 1%;
+                    box-sizing: border-box;
+
+                    h3
+                    {
+                        font-size: 16px;
+                        font-weight: 500;
+                        color: rgba(0, 0, 0, 0.7);
+                    }
+                }
+
+                .cards-container
+                {
+                    width: 90%;
+                    margin-top: 0.9%;
+                    height: 40%;
+                    place-items: center;
+                    padding: 1%;
+
+                    .card
+                    {
+                        width: 95%;
+                        height: 100%;
+                        border: inherit;
+                        border-radius: 10px;
+                        @extend .flex-column, .y-start;
+                        padding: 5%;
+
+                        i
+                        {
+                            font-size: 40px;
+                            margin-bottom: 20px;
+                        }
+
+                        h3
+                        {
+                            font-size: 16px;
+                            margin-bottom: 10px;
+                        }
+
+                        &:nth-of-type(1)
+                        {
+                            background-color: lighten($primary-color, 15);
+                        
+                            i
+                            {
+                                color: darken($white, 10);
+                            }
+
+                        }
+                        &:nth-of-type(2), &:nth-of-type(4)
+                        {
+                            @extend .shadowed;
+
+                            i
+                            {
+                                color: lighten($secondary-color, 10);
+                            }
+                        }
+                        &:nth-of-type(3)
+                        {
+                            background-color: lighten($secondary-color, 16);
+                            
+                            i
+                            {
+                                color: lighten($primary-color, 19);
+                            }
+                        }
+                    }
+                }
+
+                .stats-container
+                {
+                    width: 90%;
+                    height: 45%;
+                    padding: 1%;
+                    place-items: center;
+
+                    .card
+                    {
+                        i
+                        {
+                            font-size: 40px;
+                            margin-bottom: 20px;
+                            color: lighten($primary-color, 15);
+                        }
+
+                        h3
+                        {
+                            font-size: 18px;
+                            margin-bottom: 10px;
+                            opacity: 0.7;
+                        }
+
+                        p
+                        {
+                            font-size: 25px;
+                            opacity: 0.5;
+                            font-style: italic;
+                        }
+                    }
+                }
+            }
+
+        }
+    }
+
+}

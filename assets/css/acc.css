@@ -74,7 +74,7 @@ html {
   grid-gap: 5px;
 }
 
-.grid-2, body section:nth-of-type(2) .grid-container, body section:nth-of-type(3) .grid-container, body section:nth-of-type(4) .grid-container {
+.grid-2 {
   display: grid;
   grid-template-columns: repeat(2, 1fr);
   grid-gap: 5px;
@@ -140,7 +140,7 @@ html {
   grid-gap: 5px;
 }
 
-.flex-column, body section:nth-of-type(2) .grid-container .text, body section:nth-of-type(3) .grid-container .text, body section:nth-of-type(4) .grid-container .text, body section:nth-of-type(1) .grid-container .card i, body section:nth-of-type(1) .grid-container .card, body section, body main .showcase-text, body main, body header .btn, .x-end, .x-start, .y-end, .y-start, header .btn {
+.flex-column, body main .main-bar .container .cards-container .card, body main .main-bar .container, body main .main-bar, .x-end, .x-start, .y-end, .y-start, header .btn {
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -152,7 +152,7 @@ html {
   justify-content: space-between;
 }
 
-.y-start, body section {
+.y-start, body main .main-bar .container .cards-container .card, body main .main-bar .container {
   justify-content: flex-start;
 }
 
@@ -160,7 +160,7 @@ html {
   justify-content: flex-end;
 }
 
-.x-start, body section:nth-of-type(2) .grid-container .text, body section:nth-of-type(3) .grid-container .text, body section:nth-of-type(4) .grid-container .text, body main .showcase-text, body main {
+.x-start {
   align-items: flex-start;
 }
 
@@ -303,7 +303,7 @@ html {
   background-color: #e6e6e6;
 }
 
-.shadowed, .google-btn {
+.shadowed, body main .main-bar .container .cards-container .card:nth-of-type(2), body main .main-bar .container .cards-container .card:nth-of-type(4), body main .sidebar, .google-btn {
   box-shadow: inset 1px 1px rgba(255, 255, 255, 0.178), inset -1px -1px rgba(255, 255, 255, 0.132), 1px 3px 24px -1px rgba(0, 0, 0, 0.17);
 }
 
@@ -593,7 +593,7 @@ html {
   font-weight: 300;
 }
 
-.txt-primary, body section:nth-of-type(2) .grid-container .text h1, body section:nth-of-type(3) .grid-container .text h1, body section:nth-of-type(4) .grid-container .text h1 {
+.txt-primary {
   color: #e90e74;
 }
 
@@ -735,192 +735,129 @@ html {
   }
 }
 body {
-  background-color: #fff;
   margin: 0;
   padding: 0;
   box-sizing: border-box;
-  background-color: #0874c2;
-}
-body header {
-  position: fixed;
-  top: 0;
-  z-index: 999;
-  width: 100%;
-  height: 60px;
-  display: inline-flex;
-  transition: all 0.5s cubic-bezier(0.85, 0.135, 0.15, 0.86);
-}
-body header .title {
-  background-color: #fff;
-  width: 10%;
-  position: relative;
-  left: 4%;
-  height: 96%;
-}
-body header .title img {
-  height: 50px;
-  margin: 5px;
-  position: relative;
-}
-body header nav {
-  width: 40%;
-  position: relative;
-  left: 10%;
-  padding-top: 1.5%;
-}
-body header nav ul {
-  display: inline-flex;
-  width: 60%;
-  justify-content: space-evenly;
-}
-body header nav ul li a {
-  font-size: 13px;
-  color: rgba(255, 255, 255, 0.9);
-  letter-spacing: 1px;
-  opacity: 0.8;
-}
-body header nav ul li a:hover {
-  color: rgba(255, 255, 255, 0.6);
-}
-body header .btn {
-  background-color: #f11f81;
-  height: 75%;
-  margin-top: 0.6%;
-  position: relative;
-  left: 30%;
-  width: 10%;
-  border-radius: 30px;
-  font-size: 13px;
+  background-color: white;
 }
 body main {
-  background-color: #fff;
-  position: relative;
+  width: 100%;
   height: 100vh;
-  width: 100%;
-  background: url("../img/nurse.jpg") center center;
-  background-position-y: 1px;
-  background-size: cover;
-  background-repeat: no-repeat;
-  z-index: 1;
-  scroll-snap-align: start;
-  scroll-snap-type: y mandatory;
-  background-origin: 1px;
-  background-attachment: fixed;
+  display: inline-flex;
 }
-body main .showcase-text {
-  box-sizing: border-box;
-  padding: 1%;
-  width: 50%;
-  height: 60%;
-  top: 6%;
-  position: relative;
-  left: 3%;
-}
-body main .showcase-text * {
-  margin-bottom: 20px;
-}
-body main .showcase-text h1 {
-  font-size: 3rem;
-  width: 90%;
-  opacity: 0;
-  animation: slideIn 1.2s ease-in-out forwards;
-  animation-delay: 0.1s;
-}
-body main .showcase-text a {
-  padding: 20px 30px;
-  border-radius: 30px;
-  opacity: 0;
-  animation: slideIn 1.2s ease-in-out forwards;
-  animation-delay: 0.5s;
-}
-body section {
-  box-sizing: border-box;
-  padding-top: 5%;
+body main .sidebar {
+  width: 20%;
+  height: 100%;
   background-color: #fff;
-  height: 80vh;
+}
+body main .sidebar .container {
+  width: 90%;
+  height: 75%;
+  position: relative;
+  top: 5%;
+}
+body main .sidebar .container ul {
+  height: 95%;
   width: 100%;
 }
-body section:nth-of-type(1) {
-  text-align: center;
-  background-attachment: fixed;
-}
-body section:nth-of-type(1) p {
-  margin: 10px 0;
-  width: 60%;
-  text-transform: none;
-  opacity: 0.8;
-}
-body section:nth-of-type(1) .grid-container {
-  width: 85%;
-  height: 40%;
-}
-body section:nth-of-type(1) .grid-container .card {
-  text-align: center;
-}
-body section:nth-of-type(1) .grid-container .card i {
-  width: 40px;
-  height: 40px;
-  background-color: #faafd2;
-  border-radius: 50%;
-  padding: 30px;
-  color: #d10d68;
-  margin-bottom: 20px;
-}
-body section:nth-of-type(1) .grid-container .card p {
-  font-size: 0.9rem;
-  margin-bottom: 20px;
-  width: 90%;
-  text-transform: none;
-}
-body section:nth-of-type(2) .grid-container, body section:nth-of-type(3) .grid-container, body section:nth-of-type(4) .grid-container {
-  width: 90%;
-  height: 90%;
-}
-body section:nth-of-type(2) .grid-container img, body section:nth-of-type(3) .grid-container img, body section:nth-of-type(4) .grid-container img {
-  width: 90%;
-  height: 90%;
-  border-radius: 10px;
-}
-body section:nth-of-type(2) .grid-container .text, body section:nth-of-type(3) .grid-container .text, body section:nth-of-type(4) .grid-container .text {
+body main .sidebar .container ul li {
+  height: 60px;
+  margin-bottom: 5px;
+  border-bottom: 1px solid rgba(0, 0, 0, 0.15);
   box-sizing: border-box;
+  padding-left: 5%;
+  padding-top: 5%;
+}
+body main .sidebar .container ul li a {
+  color: rgba(0, 0, 0, 0.7);
+  font-size: 12px;
+}
+body main .sidebar .container ul li a i {
+  color: #f11f81;
+  width: 30px;
+  height: 30px;
+  padding: 10px;
+  margin-right: 3%;
+  font-size: 16px;
+}
+body main .main-bar {
+  width: 75%;
+  height: 83%;
+  margin-left: 2%;
+  margin-top: 6%;
+}
+body main .main-bar .container {
+  width: 98%;
+  height: 95%;
+}
+body main .main-bar .container .header {
+  width: 90%;
+  height: 8%;
+  border-bottom: 1px solid rgba(0, 0, 0, 0.15);
+  padding-left: 1%;
+  padding-top: 1%;
+  box-sizing: border-box;
+}
+body main .main-bar .container .header h3 {
+  font-size: 16px;
+  font-weight: 500;
+  color: rgba(0, 0, 0, 0.7);
+}
+body main .main-bar .container .cards-container {
+  width: 90%;
+  margin-top: 0.9%;
+  height: 40%;
+  place-items: center;
   padding: 1%;
 }
-body section:nth-of-type(2) .grid-container .text h1, body section:nth-of-type(3) .grid-container .text h1, body section:nth-of-type(4) .grid-container .text h1 {
-  font-size: 40px;
+body main .main-bar .container .cards-container .card {
   width: 95%;
+  height: 100%;
+  border: inherit;
+  border-radius: 10px;
+  padding: 5%;
+}
+body main .main-bar .container .cards-container .card i {
+  font-size: 40px;
+  margin-bottom: 20px;
+}
+body main .main-bar .container .cards-container .card h3 {
+  font-size: 16px;
   margin-bottom: 10px;
 }
-body section:nth-of-type(2) .grid-container .text p, body section:nth-of-type(3) .grid-container .text p, body section:nth-of-type(4) .grid-container .text p {
-  width: 80%;
+body main .main-bar .container .cards-container .card:nth-of-type(1) {
+  background-color: #f11f81;
+}
+body main .main-bar .container .cards-container .card:nth-of-type(1) i {
+  color: #e6e6e6;
+}
+body main .main-bar .container .cards-container .card:nth-of-type(2) i, body main .main-bar .container .cards-container .card:nth-of-type(4) i {
+  color: #0a91f3;
+}
+body main .main-bar .container .cards-container .card:nth-of-type(3) {
+  background-color: #269ff6;
+}
+body main .main-bar .container .cards-container .card:nth-of-type(3) i {
+  color: #f3328c;
+}
+body main .main-bar .container .stats-container {
+  width: 90%;
+  height: 45%;
+  padding: 1%;
+  place-items: center;
+}
+body main .main-bar .container .stats-container .card i {
+  font-size: 40px;
   margin-bottom: 20px;
-  text-transform: none;
+  color: #f11f81;
 }
-body section:nth-of-type(5) {
-  padding: 0;
-  height: 60vh;
-  width: 100%;
-  background-image: url("../img/cure.jpg");
-  background-size: cover;
-  background-position: center;
-  background-repeat: no-repeat;
+body main .main-bar .container .stats-container .card h3 {
+  font-size: 18px;
+  margin-bottom: 10px;
+  opacity: 0.7;
 }
-body section:nth-of-type(5) .overlay {
-  width: 100%;
-  height: 100%;
-  z-index: 2;
-  background-color: rgba(0, 0, 0, 0.39);
-  -webkit-backdrop-filter: blur(5px);
-          backdrop-filter: blur(5px);
-}
-body section:nth-of-type(5) .overlay h1 {
-  font-size: 3em;
-  width: 60%;
-  text-align: center;
-  margin-bottom: 20px;
-  text-transform: none;
-}
-body section:nth-of-type(5) .overlay a {
-  mix-blend-mode: normal;
-  padding: 20px 30px;
-  border-radius: 50px;
-}/*# sourceMappingURL=style.css.map */
+body main .main-bar .container .stats-container .card p {
+  font-size: 25px;
+  opacity: 0.5;
+  font-style: italic;
+}/*# sourceMappingURL=acc.css.map */
