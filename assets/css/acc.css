@@ -74,7 +74,7 @@ html {
   grid-gap: 5px;
 }
 
-.grid-2 {
+.grid-2, body main .main-bar .container .form-container form {
   display: grid;
   grid-template-columns: repeat(2, 1fr);
   grid-gap: 5px;
@@ -860,4 +860,43 @@ body main .main-bar .container .stats-container .card p {
   font-size: 25px;
   opacity: 0.5;
   font-style: italic;
+}
+body main .main-bar .container .form-container {
+  width: 90%;
+  height: 80%;
+  margin-top: 5%;
+  padding: 1%;
+}
+body main .main-bar .container .form-container form {
+  margin-top: 2%;
+  width: 100%;
+  height: 60%;
+}
+body main .main-bar .container .form-container form .form-group {
+  display: flex;
+  flex-direction: column;
+}
+body main .main-bar .container .form-container form .form-group label {
+  font-size: 14px;
+  margin-bottom: 5px;
+  opacity: 1;
+  color: #f11f81;
+}
+body main .main-bar .container .form-container form .form-group input {
+  height: 35px;
+  padding: 1px;
+  border: none;
+  width: 98%;
+  border-bottom: 1px solid rgba(0, 0, 0, 0.25);
+  text-transform: none;
+  margin-bottom: 5%;
+}
+body main .main-bar .container .form-container form .form-group input:focus {
+  transition: all 1s ease-in;
+  border-bottom: 1px solid rgba(0, 0, 0, 0.7);
+}
+body main .main-bar .container .form-container form button {
+  width: 200%;
+  height: 40px;
+  margin-top: 3%;
 }/*# sourceMappingURL=acc.css.map */
