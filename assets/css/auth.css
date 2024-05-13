@@ -42,7 +42,7 @@ header nav ul li a:hover {
   color: rgba(0, 0, 0, 0.6);
 }
 header .btn {
-  background-color: #f11f81;
+  background-color: #e9006c;
   height: 75%;
   margin-top: 0.6%;
   position: relative;
@@ -140,7 +140,7 @@ html {
   grid-gap: 5px;
 }
 
-.flex-column, body section div.form form, body section div.form, body section div.pre .overlay, body main div.form form, body main div.form, body main div.pre .overlay, .x-end, .x-start, .y-end, .y-start, header .btn {
+.flex-column, body section div.form form, body section div.form, body section div.pre .overlay, body main div.form form, body main div.form, body main div.pre .overlay, .modal .modal-content form, .modal .modal-content span, .modal .modal-content, .modal, .x-end, .x-start, .y-end, .y-start, header .btn {
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -152,7 +152,7 @@ html {
   justify-content: space-between;
 }
 
-.y-start, body main div.form form, body main div.form {
+.y-start, body main div.form form, body main div.form, .modal .modal-content {
   justify-content: flex-start;
 }
 
@@ -160,7 +160,7 @@ html {
   justify-content: flex-end;
 }
 
-.x-start, body section div.form form, body section div.form, body main div.form form, body main div.form {
+.x-start, body section div.form form, body section div.form, body main div.form form, body main div.form, .modal .modal-content form, .modal .modal-content {
   align-items: flex-start;
 }
 
@@ -178,15 +178,15 @@ html {
 }
 
 ::-webkit-scrollbar-thumb {
-  background: linear-gradient(45deg, #b90b5c, #0874c2);
+  background: linear-gradient(45deg, #9c0048, #0874c2);
   border-radius: 10px;
 }
 
 .btn-bordered-gradient {
   font-size: 14px;
   border: 2px solid;
-  border-top: 2px solid #b90b5c;
-  border-bottom: 2px solid #b90b5c;
+  border-top: 2px solid #9c0048;
+  border-bottom: 2px solid #9c0048;
   border-right: 2px solid #0874c2;
   border-left: 2px solid #0874c2;
   width: -moz-max-content;
@@ -199,13 +199,13 @@ html {
   transition: all 2s ease-out;
   border-top-color: #0874c2;
   border-bottom-color: #0874c2;
-  border-right-color: #b90b5c;
-  border-left-color: #b90b5c;
+  border-right-color: #9c0048;
+  border-left-color: #9c0048;
   background-color: #b4defc;
 }
 
 .btn-primary {
-  background-color: #e90e74;
+  background-color: #e9006c;
   color: #fff;
   border: none;
   padding: 10px 20px;
@@ -221,12 +221,12 @@ html {
 }
 .btn-primary:hover {
   transition: all 0.3s ease-in-out;
-  background-color: #d10d68;
+  background-color: #b60054;
 }
 
 .btn-secondary {
   background-color: #0874c2;
-  border: 2px solid #b90b5c;
+  border: 2px solid #9c0048;
   color: #111111;
   border: none;
   padding: 10px 20px;
@@ -317,8 +317,8 @@ html {
 
 .btn-transparent-primary {
   background-color: transparent;
-  color: #b90b5c;
-  border: 2px solid #b90b5c;
+  color: #9c0048;
+  border: 2px solid #9c0048;
   padding: 10px 20px;
   border-radius: 5px;
   cursor: pointer;
@@ -329,7 +329,7 @@ html {
   margin-left: 5px;
 }
 .btn-transparent-primary:hover {
-  background-color: #b90b5c;
+  background-color: #9c0048;
   color: #fff;
 }
 
@@ -391,7 +391,7 @@ html {
 }
 
 .btn-gradient {
-  background: linear-gradient(to right, #d60d6b, #0a91f3);
+  background: linear-gradient(to right, #bb0057, #0a91f3);
   color: white;
   letter-spacing: 1px;
   border: none;
@@ -405,7 +405,7 @@ html {
   margin-left: 5px;
 }
 .btn-gradient:hover {
-  background: linear-gradient(to left, #d60d6b, #0a91f3);
+  background: linear-gradient(to left, #bb0057, #0a91f3);
 }
 
 .btn-transparent-white {
@@ -548,14 +548,14 @@ html {
 .dot-primary {
   height: 30px;
   width: 50px;
-  background-color: #b90b5c;
+  background-color: #9c0048;
   border-radius: 50%;
 }
 
 .border-primary {
   height: 2px;
   width: 100px;
-  background-color: #b90b5c;
+  background-color: #9c0048;
   padding: 0;
   border-radius: 50px;
   margin-bottom: 20px;
@@ -594,7 +594,7 @@ html {
 }
 
 .txt-primary, body section div.form h1, body main div.form h1 {
-  color: #e90e74;
+  color: #cf0060;
 }
 
 .txt-secondary {
@@ -734,6 +734,96 @@ html {
     transform: scale(1);
   }
 }
+table {
+  width: 100%;
+  align-items: start;
+  border: inherit;
+  border-collapse: collapse;
+  padding: 10px;
+}
+table thead {
+  background-color: #e9006c;
+  text-align: start;
+  height: 50px;
+  padding: 10px;
+}
+table thead th {
+  text-align: start;
+  padding: 10px;
+  color: #fff;
+  font-weight: 500;
+}
+table tbody tr {
+  padding: 10px;
+  height: 50px;
+}
+table tbody tr:nth-of-type(odd) {
+  background-color: whitesmoke;
+}
+table tbody tr td {
+  padding: 10px;
+  font-size: 13px;
+  font-weight: 500;
+  height: 35px;
+  text-transform: none;
+}
+table tbody tr td .btn-primary {
+  background-color: #e9006c;
+  font-size: 10px;
+  height: 80%;
+}
+
+.modal {
+  height: 100vh;
+  width: 100%;
+  z-index: 999;
+  position: fixed;
+  background-color: rgba(0, 0, 0, 0.17);
+  -webkit-backdrop-filter: blur(5px);
+          backdrop-filter: blur(5px);
+  display: none;
+}
+.modal .modal-content {
+  width: 50%;
+  height: 85%;
+  background-color: #fff;
+  border-radius: 10px;
+  padding: 3%;
+  position: relative;
+  opacity: 0;
+  animation: fadeUp 0.5s ease-in forwards 1;
+  animation-delay: 0.2s;
+}
+.modal .modal-content h3 {
+  color: #e9006c;
+}
+.modal .modal-content span {
+  position: relative;
+  padding: 10px;
+  background-color: #e9006c;
+  color: #fff;
+  width: 30px;
+  height: 30px;
+  border-radius: 50%;
+  left: 95%;
+  top: -7%;
+  cursor: pointer;
+}
+.modal .modal-content form {
+  height: 80%;
+  width: 100%;
+  margin-top: 3%;
+}
+.modal .modal-content form input {
+  width: 100%;
+  height: 50px;
+  margin-bottom: 20px;
+  padding: 10px 20px;
+  border-radius: 10px;
+  background-color: #f2f2f2;
+  border-color: transparent;
+}
+
 body {
   background-color: white;
   margin: 0;
