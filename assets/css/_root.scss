@@ -6,7 +6,7 @@ $secondary-color: #0874c2;
 $white: #fff;
 $bg: #fcfeffd6;
 $black: #111111;
-$red: rgb(218, 64, 64);
+$red: rgb(207, 1, 1);
 $green: rgb(5, 194, 106);
 
 
@@ -840,9 +840,8 @@ table
     {
         background-color: lighten($primary-color, 15);
         text-align: start;
-        height: 50px;
+        height: 40px;
         padding: 10px;
-
         th
         {
             text-align: start;

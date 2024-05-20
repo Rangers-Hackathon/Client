@@ -252,7 +252,7 @@ html {
 }
 
 .btn-red {
-  background-color: rgb(218, 64, 64);
+  background-color: rgb(207, 1, 1);
   color: #fff;
   border: none;
   padding: 10px 20px;
@@ -265,7 +265,7 @@ html {
   margin-left: 5px;
 }
 .btn-red:hover {
-  background-color: #c22525;
+  background-color: #9c0101;
 }
 
 .btn-green {
@@ -610,7 +610,7 @@ html {
 }
 
 .txt-red {
-  color: rgb(218, 64, 64);
+  color: rgb(207, 1, 1);
 }
 
 .txt-green {
@@ -744,7 +744,7 @@ table {
 table thead {
   background-color: #e9006c;
   text-align: start;
-  height: 50px;
+  height: 40px;
   padding: 10px;
 }
 table thead th {

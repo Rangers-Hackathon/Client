@@ -12,7 +12,7 @@ body
     {
         width: 100%;
         height: 100vh;
-        
+
         display: inline-flex;
 
         .sidebar
@@ -75,8 +75,7 @@ body
                 width: 98%;
                 height: 95%;
                 @extend .flex-column, .y-start;
-    
-                
+
                 .header
                 {
                     width: 90%;
@@ -239,6 +238,17 @@ body
                             height: 40px;
                             margin-top: 3%;
                         }
+                    }
+                }
+
+                .recents
+                {
+                    width: 90%;
+                    margin-top: 1%;
+
+                    table
+                    {
+                        width: 100%;
                     }
                 }
             }

@@ -242,7 +242,7 @@ body
                 .grid-container
                 {
                     width: 100%;
-                    height: 45%;
+                    height: 65%;
                     @extend .grid-2;
                     padding: 0.5%;
 
@@ -285,14 +285,47 @@ body
                             padding: 2%;
                             place-items: center;
                             border-radius: 10px;
+                            place-items: start;
 
                             div
                             {
-                                height: 99%;
+                                margin-bottom: 10px;
+                                height: 90%;
                                 width: 80%;
                                 padding: 5%;
                                 @extend .flex-column, .x-start;
                                 background-color: lighten($primary-color, 55);
+
+                                &.negative
+                                {
+                                    background-color: lighten($red, 20);
+
+                                    h1
+                                    {
+                                        color: $white;
+                                    }
+
+                                    h3
+                                    {
+                                        color: $white;
+                                    }
+                                }
+
+                                &.positive
+                                {
+                                    background-color: lighten($green, 10);
+
+                                    h1
+                                    {
+                                        color: $white;
+                                    }
+
+                                    h3
+                                    {
+                                        color: $white;
+                                    }
+                                }
+
                                 border-radius: 20px;
 
                                 &:nth-of-type(2)
