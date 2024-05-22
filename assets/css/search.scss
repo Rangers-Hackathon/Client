@@ -14,7 +14,7 @@ body
         padding: 2%;
         @extend .flex-column;
         position: relative;
-        top: 30%;
+        top: 60px;
 
         .container
         {
@@ -51,6 +51,62 @@ body
                             background-color: darken($white, 8);
                         }
                     }
+                }
+            }
+        }
+    }
+
+    section
+    {
+        height: 100vh;
+        position: relative;
+        top: 70px;
+        width: 100%;
+        box-sizing: border-box;
+        padding: 2%;
+        @extend .flex-column, .x-start, .y-start;
+        position: relative;
+
+        h1
+        {
+            font-size: 1.7rem;
+            font-weight: 500;
+            width: 100%;
+            border-bottom: 2px solid darken($white, 15);
+            padding: 1% 0;
+        }
+
+        .container
+        {
+            margin-top: 40px;
+            width: 90%;
+            height: 70vh;
+            overflow-y: auto;
+
+            div
+            {
+                height:90%;
+                width: 100%;
+
+                img
+                {
+                    height: 60%;
+                    width: 80%;
+                }
+
+                *
+                {
+                    margin-bottom: 10px;
+
+                    i
+                    {
+                        margin-right: 5px
+                    }
+                }
+
+                h3
+                {
+                    @extend .txt-primary;
                 }
             }
         }
